@@ -1,6 +1,6 @@
-# Installing {{ product }} on Ubuntu
+# Installing <!-- {{ product }} --> on Ubuntu
 
-The recommended way to install {{ product }} is to use prebuilt packages from our official release repository.
+The recommended way to install <!-- {{ product }} --> is to use prebuilt packages from our official release repository.
 If the repository is not configured yet,
 please [add](#adding-icinga-package-repository) it first
 before [installing](#installing-the-package) the package.

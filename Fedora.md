@@ -1,6 +1,6 @@
-# Installing {{ product }} on Fedora
+# Installing <!-- {{ product }} --> on Fedora
 
-The recommended way to install {{ product }} is to use prebuilt packages from our official release repository.
+The recommended way to install <!-- {{ product }} --> is to use prebuilt packages from our official release repository.
 If the repository is not configured yet,
 please [add](#adding-icinga-package-repository) it first
 before [installing](#installing-the-package) the package.
@@ -18,8 +18,8 @@ dnf config-manager --add-repo https://packages.icinga.com/fedora/$(. /etc/os-rel
 
 ## Installing the Package
 
-Use your distribution's package manager to install the `{{ package }}` package as follows:
+Use your distribution's package manager to install the `<!-- {{ package }} -->` package as follows:
 
 ```bash
-dnf install {{ package }}
+dnf install <!-- {{ package }} -->
 ```

@@ -1,6 +1,6 @@
-# Installing {{ product }} on RHEL
+# Installing <!-- {{ product }} --> on RHEL
 
-The recommended way to install {{ product }} is to use prebuilt packages from our official release repository.
+The recommended way to install <!-- {{ product }} --> is to use prebuilt packages from our official release repository.
 If the repository is not configured yet,
 please [add](#adding-icinga-package-repository) it first
 before [installing](#installing-the-package) the package.
@@ -25,16 +25,16 @@ wget https://packages.icinga.com/subscription/rhel/ICINGA-release.repo -O /etc/y
 
 ## Installing the Package
 
-Use your distribution's package manager to install the `{{ package }}` package as follows:
+Use your distribution's package manager to install the `<!-- {{ package }} -->` package as follows:
 
 === RHEL 8 or later
 
     ```bash
-    dnf install {{ package }}
+    dnf install <!-- {{ package }} -->
     ```
 
 === RHEL 7
 
     ```bash
-    yum install {{ package }}
+    yum install <!-- {{ package }} -->
     ```

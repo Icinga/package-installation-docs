@@ -1,6 +1,6 @@
-# Installing {{ product }} on Debian
+# Installing <!-- {{ product }} --> on Debian
 
-The recommended way to install {{ product }} is to use prebuilt packages from our official release repository.
+The recommended way to install <!-- {{ product }} --> is to use prebuilt packages from our official release repository.
 If the repository is not configured yet,
 please [add](#adding-icinga-package-repository) it first
 before [installing](#installing-the-package) the package.
@@ -28,8 +28,8 @@ apt-get update
 
 ## Installing the Package
 
-Use your distribution's package manager to install the `{{ package }}` package as follows:
+Use your distribution's package manager to install the `<!-- {{ package }} -->` package as follows:
 
 ```bash
-apt-get install {{ package }}
+apt-get install <!-- {{ package }} -->
 ```
