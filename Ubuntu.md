@@ -25,3 +25,4 @@ wget -O - https://packages.icinga.com/icinga.key | apt-key add -
 
 apt-get update
 ```
+<!-- {% include "02-Installation.md" %} -->

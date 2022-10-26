@@ -23,3 +23,4 @@ Use your distribution's package manager to install the `<!-- {{ package }} -->` 
 ```bash
 dnf install <!-- {{ package }} -->
 ```
+<!-- {% include "02-Installation.md" %} -->
