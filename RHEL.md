@@ -27,13 +27,13 @@ wget https://packages.icinga.com/subscription/rhel/ICINGA-release.repo -O /etc/y
 
 Use your distribution's package manager to install the `<!-- {{ package }} -->` package as follows:
 
-=== RHEL 8 or later
+=== "RHEL 8 or later"
 
     ```bash
     dnf install <!-- {{ package }} -->
     ```
 
-=== RHEL 7
+=== "RHEL 7"
 
     ```bash
     yum install <!-- {{ package }} -->
