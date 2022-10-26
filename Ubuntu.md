@@ -25,4 +25,12 @@ wget -O - https://packages.icinga.com/icinga.key | apt-key add -
 
 apt-get update
 ```
+
+## Installing the Package
+
+Use your distribution's package manager to install the `<!-- {{ package }} -->` package as follows:
+
+```bash
+apt-get install <!-- {{ package }} -->
+```
 <!-- {% include "02-Installation.md" %} -->
