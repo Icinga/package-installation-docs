@@ -13,6 +13,7 @@ Here’s how to add the official release repository:
 
 ```bash
 rpm --import https://packages.icinga.com/icinga.key
+dnf install -y 'dnf-command(config-manager)'
 dnf config-manager --add-repo https://packages.icinga.com/fedora/$(. /etc/os-release; echo "$VERSION_ID")/release
 ```
 
