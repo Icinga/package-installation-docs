@@ -13,7 +13,7 @@ Here’s how to add the official release repository:
 
 ```bash
 rpm --import https://packages.icinga.com/icinga.key
-wget https://packages.icinga.com/centos/ICINGA-release.repo -O /etc/yum.repos.d/ICINGA-release.repo
+curl https://packages.icinga.com/centos/ICINGA-release.repo -o /etc/yum.repos.d/ICINGA-release.repo
 ```
 
 ## Installing the Package
