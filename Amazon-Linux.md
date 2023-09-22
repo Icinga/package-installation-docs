@@ -27,7 +27,15 @@ wget https://packages.icinga.com/subscription/amazon/ICINGA-release.repo -O /etc
 
 Use your distribution's package manager to install the `<!-- {{ package }} -->` package as follows:
 
-```bash
-yum install <!-- {{ package }} -->
-```
+=== "Amazon Linux 2023"
+
+    ```bash
+    dnf install <!-- {{ package }} -->
+    ```
+
+=== "Amazon Linux 2"
+
+    ```bash
+    yum install <!-- {{ package }} -->
+    ```
 <!-- {% include "02-Installation.md" %} -->
