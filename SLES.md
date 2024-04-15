@@ -13,7 +13,7 @@ All packages we provide are signed with the following [key](https://packages.ici
 
     A paid repository subscription is required for Amazon Linux 2 repositories. Get more information on
     [icinga.com/subscription](https://icinga.com/subscription).
-    
+
     `zypper` automatically prompts you to enter your username and password for the subscription.
 
 Here’s how to add the official release repository:
