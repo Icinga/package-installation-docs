@@ -12,7 +12,6 @@ All packages we provide are signed with the following [key](https://packages.ici
 Here’s how to add the official release repository:
 
 ```bash
-rpm --import https://packages.icinga.com/icinga.key
 curl https://packages.icinga.com/centos/ICINGA-release.repo -o /etc/yum.repos.d/ICINGA-release.repo
 ```
 
