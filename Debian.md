@@ -15,12 +15,14 @@ Here’s how to add the official release repository:
 apt update
 apt -y install apt-transport-https wget gnupg
 
-wget -O - https://packages.icinga.com/icinga.key | gpg --dearmor -o /usr/share/keyrings/icinga-archive-keyring.gpg
+install -d -o root -g root -m 0755 /etc/apt/keyrings
+
+wget -O - https://packages.icinga.com/icinga.key | gpg --dearmor -o /etc/apt/keyrings/icinga.gpg
 
 DIST=$(awk -F"[)(]+" '/VERSION=/ {print $2}' /etc/os-release); \
- echo "deb [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com/debian icinga-${DIST} main" > \
+ echo "deb [signed-by=/etc/apt/keyrings/icinga.gpg] https://packages.icinga.com/debian icinga-${DIST} main" > \
  /etc/apt/sources.list.d/${DIST}-icinga.list
- echo "deb-src [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com/debian icinga-${DIST} main" >> \
+ echo "deb-src [signed-by=/etc/apt/keyrings/icinga.gpg] https://packages.icinga.com/debian icinga-${DIST} main" >> \
  /etc/apt/sources.list.d/${DIST}-icinga.list
 
 apt update
