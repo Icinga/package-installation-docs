@@ -11,7 +11,7 @@ All packages we provide are signed with the following [key](https://packages.ici
 
 !!! info
 
-    A paid repository subscription is required for Amazon Linux 2 repositories. Get more information on
+    A paid repository subscription is required for RHEL repositories. Get more information on
     [icinga.com/subscription](https://icinga.com/subscription).
 
     Don't forget to fill in the username and password section with appropriate credentials in the local .repo file.
