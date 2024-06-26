@@ -19,8 +19,6 @@ All packages we provide are signed with the following [key](https://packages.ici
 Here’s how to add the official release repository:
 
 ```bash
-rpm --import https://packages.icinga.com/icinga.key
-
 zypper ar -r https://packages.icinga.com/subscription/sles/$releasever/release/ icinga-stable-release
 ```
 
