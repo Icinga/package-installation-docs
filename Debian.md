@@ -1,4 +1,6 @@
+<!-- {% if not disable_header %} -->
 # Installing <!-- {{ product }} --> on Debian
+<!-- {% endif %} -->
 
 The recommended way to install <!-- {{ product }} --> is to use prebuilt packages from our official release repository.
 If the repository is not configured yet,
