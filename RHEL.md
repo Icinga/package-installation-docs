@@ -26,15 +26,8 @@ curl https://packages.icinga.com/subscription/rhel/ICINGA-release.repo -o /etc/y
 
 Use your distribution's package manager to install the `<!-- {{ package }} -->` package as follows:
 
-=== "RHEL 8 or later"
+```bash
+dnf install <!-- {{ package }} -->
+```
 
-    ```bash
-    dnf install <!-- {{ package }} -->
-    ```
-
-=== "RHEL 7"
-
-    ```bash
-    yum install <!-- {{ package }} -->
-    ```
 <!-- {% include "02-Installation.md" %} -->
