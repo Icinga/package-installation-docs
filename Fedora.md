@@ -23,4 +23,6 @@ Use your distribution's package manager to install the `<!-- {{ package }} -->` 
 ```bash
 dnf install <!-- {{ package }} -->
 ```
+
+<!-- {% set fedora = True %} -->
 <!-- {% include "02-Installation.md" %} -->

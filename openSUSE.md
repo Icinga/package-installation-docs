@@ -22,4 +22,6 @@ Use your distribution's package manager to install the `<!-- {{ package }} -->` 
 ```bash
 zypper install <!-- {{ package }} -->
 ```
+
+<!-- {% set opensuse = True %} -->
 <!-- {% include "02-Installation.md" %} -->

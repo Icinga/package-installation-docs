@@ -39,4 +39,8 @@ Use your distribution's package manager to install the `<!-- {{ package }} -->` 
 ```bash
 apt install <!-- {{ package }} -->
 ```
+
+<!-- {% if not raspberry_pi_os %} -->
+<!-- {% set debian = True %} -->
+<!-- {% endif %} -->
 <!-- {% include "02-Installation.md" %} -->

@@ -30,4 +30,5 @@ Use your distribution's package manager to install the `<!-- {{ package }} -->` 
 dnf install <!-- {{ package }} -->
 ```
 
+<!-- {% set rhel = True %} -->
 <!-- {% include "02-Installation.md" %} -->

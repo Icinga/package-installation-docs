@@ -37,4 +37,6 @@ Use your distribution's package manager to install the `<!-- {{ package }} -->` 
 ```bash
 apt install <!-- {{ package }} -->
 ```
+
+<!-- {% set ubuntu = True %} -->
 <!-- {% include "02-Installation.md" %} -->
