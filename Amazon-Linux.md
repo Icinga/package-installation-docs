@@ -37,4 +37,6 @@ Use your distribution's package manager to install the `<!-- {{ package }} -->` 
     ```bash
     yum install <!-- {{ package }} -->
     ```
+
+<!-- {% set amazon_linux = True %} -->
 <!-- {% include "02-Installation.md" %} -->
