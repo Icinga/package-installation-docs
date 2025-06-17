@@ -12,8 +12,8 @@ All packages we provide are signed with the following [key](https://packages.ici
 Here’s how to add the official release repository:
 
 ```bash
-dnf install -y 'dnf-command(config-manager)'
-dnf config-manager --add-repo https://packages.icinga.com/fedora/$(. /etc/os-release; echo "$VERSION_ID")/release
+rpm --import https://packages.icinga.com/icinga.key
+curl -o /etc/yum.repos.d/ICINGA-release.repo https://packages.icinga.com/fedora/ICINGA-release.repo
 ```
 
 ## Installing the Package
