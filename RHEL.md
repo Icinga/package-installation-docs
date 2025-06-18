@@ -11,10 +11,9 @@ All packages we provide are signed with the following [key](https://packages.ici
 
 !!! info
 
-    A paid repository subscription is required for RHEL repositories. Get more information on
-    [icinga.com/subscription](https://icinga.com/subscription).
+    A paid subscription is required to download the packages. Get more information on [icinga.com/subscriptions](https://icinga.com/subscriptions/).
 
-    Don't forget to fill in the username and password section with appropriate credentials in the local .repo file.
+    Ensure that your username and password are configured in your package manager to access restricted repositories and packages.
 
 Here’s how to add the official release repository:
 
