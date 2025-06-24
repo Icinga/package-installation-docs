@@ -9,6 +9,14 @@ All packages we provide are signed with the following [key](https://packages.ici
 
 ## Adding Icinga Package Repository
 
+<!-- {% if subscription_product %} -->
+!!! info
+
+    A paid subscription is required to download the packages. Get more information on [icinga.com/subscriptions](https://icinga.com/subscriptions/).
+
+    Ensure that your username and password are configured in your package manager to access restricted repositories and packages.
+<!-- {% endif %} -->
+
 Add our GPG Key:
 
 ```bash
@@ -27,9 +35,9 @@ Add the Repository:
 <!-- {% if subscription_product %} -->
 ```bash
 . /etc/os-release; if [ ! -z ${UBUNTU_CODENAME+x} ]; then DIST="${UBUNTU_CODENAME}"; else DIST="$(lsb_release -c| awk '{print $2}')"; fi; \
- echo "deb [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com/<!-- {{ package_repo_url }} -->/ubuntu ${DIST} main" > \
+ echo "deb [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com<!-- {{ package_repo_url }} -->/ubuntu ${DIST} main" > \
  /etc/apt/sources.list.d/${DIST}-icinga-<!-- {{ repo_file_identifier }} -->.list
- echo "deb-src [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com/<!-- {{ package_repo_url }} -->/ubuntu ${DIST} main" >> \
+ echo "deb-src [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com<!-- {{ package_repo_url }} -->/ubuntu ${DIST} main" >> \
  /etc/apt/sources.list.d/${DIST}-icinga-<!-- {{ repo_file_identifier }} -->.list
 apt update
 ```
