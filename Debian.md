@@ -30,9 +30,9 @@ Add the Repository:
 ```bash
 DIST=$(awk -F"[)(]+" '/VERSION=/ {print $2}' /etc/os-release); \
  echo "deb [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com<!-- {{ package_repo_url }} -->/debian ${DIST} main" > \
- /etc/apt/sources.list.d/${DIST}-icinga.list
+ /etc/apt/sources.list.d/${DIST}-icinga-<!-- {{ repo_file_identifier }} -->.list
  echo "deb-src [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com/<!-- {{ package_repo_url }} -->/debian ${DIST} main" >> \
- /etc/apt/sources.list.d/${DIST}-icinga.list
+ /etc/apt/sources.list.d/${DIST}-icinga-<!-- {{ repo_file_identifier }} -->.list
 
 apt update
 ```
