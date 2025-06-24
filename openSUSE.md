@@ -12,7 +12,7 @@ All packages we provide are signed with the following [key](https://packages.ici
 Here’s how to add the official release repository:
 
 ```bash
-zypper ar -r https://packages.icinga.com/openSUSE/ICINGA-release.repo
+zypper ar -r https://packages.icinga.com/<!-- {{ package_repo_url }} -->/opensuse/$releasever/release/ icinga-<!-- {{ repo_file_identifier }} -->
 ```
 
 ## Installing the Package
