@@ -19,7 +19,7 @@ Here’s how to add the official release repository:
 
 <!-- {% if subscription_product %} -->
 ```bash
-curl https://packages.icinga.com<!-- {{ package_repo_url }} -->/amazon/ICINGA-release.repo -o /etc/yum.repos.d/ICINGA-dependency-views.repo
+curl https://packages.icinga.com<!-- {{ package_repo_url }} -->/amazon/ICINGA-release.repo -o /etc/yum.repos.d/ICINGA-<!-- {{ package }} -->.repo
 ```
 <!-- {% else %} -->
 ```bash
