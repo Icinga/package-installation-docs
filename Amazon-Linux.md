@@ -17,9 +17,13 @@ All packages we provide are signed with the following [key](https://packages.ici
 
 Here’s how to add the official release repository:
 
+<!-- {% if subscription_product %} -->
+curl https://packages.icinga.com<!-- {{ package_repo_url }} -->/amazon/ICINGA-release.repo -o /etc/yum.repos.d/ICINGA-dependency-views.repo
+<!-- {% else %} -->
 ```bash
 curl https://packages.icinga.com/subscription/amazon/ICINGA-release.repo -o /etc/yum.repos.d/ICINGA-release.repo
 ```
+<!-- {% endif %} -->
 
 ## Installing the Package
 
