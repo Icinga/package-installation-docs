@@ -9,11 +9,19 @@ All packages we provide are signed with the following [key](https://packages.ici
 
 ## Adding Icinga Package Repository
 
+<!-- {% if subscription_product %} -->
+!!! info
+
+    A paid subscription is required to download the packages. Get more information on [icinga.com/subscriptions](https://icinga.com/subscriptions/).
+
+    Ensure that your username and password are configured in your package manager to access restricted repositories and packages.
+<!-- {% endif %} -->
+
 Here’s how to add the official release repository:
 
 ```bash
 rpm --import https://packages.icinga.com/icinga.key
-curl -o /etc/yum.repos.d/ICINGA-release.repo https://packages.icinga.com/fedora/ICINGA-release.repo
+curl https://packages.icinga.com<!-- {{ package_repo_url }} -->/fedora/ICINGA-release.repo -o /etc/yum.repos.d/ICINGA-<!-- {{ repo_file_identifier }} -->.repo
 ```
 
 ## Installing the Package
