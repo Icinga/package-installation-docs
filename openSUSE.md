@@ -9,10 +9,18 @@ All packages we provide are signed with the following [key](https://packages.ici
 
 ## Adding Icinga Package Repository
 
+<!-- {% if subscription_product %} -->
+!!! info
+
+    A paid subscription is required to download the packages. Get more information on [icinga.com/subscriptions](https://icinga.com/subscriptions/).
+
+    Ensure that your username and password are configured in your package manager to access restricted repositories and packages.
+<!-- {% endif %} -->
+
 Here’s how to add the official release repository:
 
 ```bash
-zypper ar -r https://packages.icinga.com/openSUSE/ICINGA-release.repo
+zypper ar -r https://packages.icinga.com<!-- {{ package_repo_url }} -->/opensuse/$releasever/release/ icinga-<!-- {{ repo_file_identifier }} -->
 ```
 
 ## Installing the Package

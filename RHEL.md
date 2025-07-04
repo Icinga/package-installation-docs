@@ -18,7 +18,7 @@ All packages we provide are signed with the following [key](https://packages.ici
 Here’s how to add the official release repository:
 
 ```bash
-curl https://packages.icinga.com/subscription/rhel/ICINGA-release.repo -o /etc/yum.repos.d/ICINGA-release.repo
+curl https://packages.icinga.com<!-- {{ package_repo_url }} -->/rhel/ICINGA-release.repo -o /etc/yum.repos.d/ICINGA-<!-- {{ repo_file_identifier }} -->.repo
 ```
 
 ## Installing the Package
