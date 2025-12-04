@@ -14,7 +14,7 @@ All packages we provide are signed with the following [key](https://packages.ici
 <!-- {% if subscription_product %} -->
 !!! info
 
-    A paid subscription is required to download the packages. Get more information on [icinga.com/subscriptions](https://icinga.com/subscriptions/).
+    A paid subscription is required to download the packages. Get more information on [icinga.com/pricing](https://icinga.com/pricing/).
 
     Ensure that your username and password are configured in your package manager to access restricted repositories and packages.
 <!-- {% endif %} -->
