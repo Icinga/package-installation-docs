@@ -34,20 +34,25 @@ Add the Repository:
 
 <!-- {% if subscription_product %} -->
 ```bash
-. /etc/os-release; if [ ! -z ${UBUNTU_CODENAME+x} ]; then DIST="${UBUNTU_CODENAME}"; else DIST="$(lsb_release -c| awk '{print $2}')"; fi; \
- echo "deb [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com<!-- {{ package_repo_url }} -->/ubuntu ${DIST} main" > \
- /etc/apt/sources.list.d/${DIST}-icinga-<!-- {{ repo_file_identifier }} -->.list
- echo "deb-src [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com<!-- {{ package_repo_url }} -->/ubuntu ${DIST} main" >> \
- /etc/apt/sources.list.d/${DIST}-icinga-<!-- {{ repo_file_identifier }} -->.list
+cat >/etc/apt/sources.list.d/icinga-<!-- {{ repo_file_identifier }} -->.sources <<EOF
+Types: deb deb-src
+URIs: https://packages.icinga.com<!-- {{ package_repo_url }} -->/ubuntu/
+Suites: $(. /etc/os-release; echo "$VERSION_CODENAME")
+Components: main
+Signed-By: /usr/share/keyrings/icinga-archive-keyring.gpg
+EOF
+
 apt update
 ```
 <!-- {% else %} -->
 ```bash
-. /etc/os-release; if [ ! -z ${UBUNTU_CODENAME+x} ]; then DIST="${UBUNTU_CODENAME}"; else DIST="$(lsb_release -c| awk '{print $2}')"; fi; \
- echo "deb [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com/ubuntu icinga-${DIST} main" > \
- /etc/apt/sources.list.d/${DIST}-icinga.list
- echo "deb-src [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com/ubuntu icinga-${DIST} main" >> \
- /etc/apt/sources.list.d/${DIST}-icinga.list
+cat >/etc/apt/sources.list.d/icinga.sources <<EOF
+Types: deb deb-src
+URIs: https://packages.icinga.com/ubuntu/
+Suites: icinga-$(. /etc/os-release; echo "$VERSION_CODENAME")
+Components: main
+Signed-By: /usr/share/keyrings/icinga-archive-keyring.gpg
+EOF
 
 apt update
 ```
