@@ -36,21 +36,25 @@ Add the Repository:
 
 <!-- {% if subscription_product %} -->
 ```bash
-DIST=$(awk -F"[)(]+" '/VERSION=/ {print $2}' /etc/os-release); \
- echo "deb [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com<!-- {{ package_repo_url }} -->/debian ${DIST} main" > \
- /etc/apt/sources.list.d/${DIST}-icinga-<!-- {{ repo_file_identifier }} -->.list
- echo "deb-src [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com/<!-- {{ package_repo_url }} -->/debian ${DIST} main" >> \
- /etc/apt/sources.list.d/${DIST}-icinga-<!-- {{ repo_file_identifier }} -->.list
+cat >/etc/apt/sources.list.d/icinga-<!-- {{ repo_file_identifier }} -->.sources <<EOF
+Types: deb deb-src
+URIs: https://packages.icinga.com<!-- {{ package_repo_url }} -->/debian/
+Suites: $(. /etc/os-release; echo "$VERSION_CODENAME")
+Components: main
+Signed-By: /usr/share/keyrings/icinga-archive-keyring.gpg
+EOF
 
 apt update
 ```
 <!-- {% else %} -->
 ```bash
-DIST=$(awk -F"[)(]+" '/VERSION=/ {print $2}' /etc/os-release); \
- echo "deb [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com/debian icinga-${DIST} main" > \
- /etc/apt/sources.list.d/${DIST}-icinga.list
- echo "deb-src [signed-by=/usr/share/keyrings/icinga-archive-keyring.gpg] https://packages.icinga.com/debian icinga-${DIST} main" >> \
- /etc/apt/sources.list.d/${DIST}-icinga.list
+cat >/etc/apt/sources.list.d/icinga.sources <<EOF
+Types: deb deb-src
+URIs: https://packages.icinga.com/debian/
+Suites: icinga-$(. /etc/os-release; echo "$VERSION_CODENAME")
+Components: main
+Signed-By: /usr/share/keyrings/icinga-archive-keyring.gpg
+EOF
 
 apt update
 ```
